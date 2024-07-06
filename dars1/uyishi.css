@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    color: green;
+    text-align: center;
+}
+
+.custom-control {
+    margin-bottom: 10px;
+}
+
+.custom-radio, .custom-checkbox {
+    display: none;
+}
+
+.custom-radio + label,
+.custom-checkbox + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.custom-radio + label:before,
+.custom-checkbox + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.custom-radio:checked + label:before {
+    border-color: green;
+    background: green;
+}
+
+.custom-radio:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.custom-checkbox + label:before {
+    border-radius: 3px;
+}
+
+.custom-checkbox:checked + label:before {
+    border-color: green;
+    background: green;
+}
+
+.custom-checkbox:checked + label:after {
+    content: '\2714';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.custom-checkbox + label:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox + label:last-child:before {
+    border-radius: 15px;
+    width: 40px;
+    height: 20px;
+}
+
+.custom-checkbox:checked + label:last-child:before {
+    background: green;
+}
+
+.custom-checkbox:checked + label:last-child:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 22px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+}

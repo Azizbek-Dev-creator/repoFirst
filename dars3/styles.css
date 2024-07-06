@@ -1,0 +1,57 @@
+.span{
+    
+}
+.box{
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    animation: narsa infinite;
+    animation-duration: 2s;
+    position: absolute;
+    animation-delay: 1s;
+}
+@keyframes narsa{
+    0%{
+        left: 0px;
+        transition: ease;
+        height: 50px;
+        width: 100px;
+    }
+    50%{
+        left: 300px;
+        background-color: aqua;
+        transition: ease-in-out;
+    }                           
+    60% {
+        left:400px;
+        background-color: blue;
+        transition: ease-in;
+    } 
+    70% {
+        left:500px;
+        background-color:cornflowerblue;
+        transition: ease;
+    }      
+    80% {
+        left:600px;
+        background-color:black;
+        transition: ease-in;
+    }    
+    90% {
+        left:900px;
+        background-color:gold;
+        transition: ease-in;
+    } 
+    99%{
+        left:450px;
+        background:rebeccapurple;
+    }   
+    99.9%{
+        left: 100px;
+        background-color: darkgray;
+    }                          
+    100%{
+        left: 1000px;
+        background:red;      
+    }
+}

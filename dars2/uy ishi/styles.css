@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: green;
+}
+.custom-toggle {
+    margin: 20px 0;
+    display: inline-block;
+}
+.custom-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.custom-toggle label {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    display: inline-block;
+    user-select: none;
+}
+
+.custom-toggle label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 20px;
+    border-radius: 12px;
+    background: gray;
+    transition: 0.3s;
+}
+.custom-toggle label:after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+.custom-toggle input[type="checkbox"]:checked + label:before {
+    background: green;
+}
+.custom-toggle input[type="checkbox"]:checked + label:after {
+    left: 22px;
+}

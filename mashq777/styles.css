@@ -1,0 +1,68 @@
+body{
+    font-family: "Roboto", sans-serif;
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1900px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+.social-media li {
+    display: flex;
+    align-items: center;
+}
+.social-media li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+.social-media li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.social-media li a:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+.img48{
+    width: 37px;
+    height: 30px;
+}

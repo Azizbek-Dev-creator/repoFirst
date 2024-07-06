@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxstars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .form-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: all 0.3s ease;
+            position: relative; /* Added position relative for proper stacking */
+        }
+        .form-container h2 {
+            margin-bottom: 1em;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container form div {
+            margin-bottom: 1em;
+            width: 100%;
+        }
+        .form-container form label {
+            display: block;
+            margin-bottom: .5em;
+            text-align: left;
+        }
+        .form-container form input {
+            width: calc(100% - 20px);
+            padding: .5em;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+        .form-container form input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        .form-container form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: .5em 2em;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-top: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .form-container form button:hover {
+            background-color: #45a049;
+        }
+        .form-container p {
+            margin-top: .5em;
+            font-size: 0.85em;
+        }
+        .form-container p a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            margin-top: 1em;
+            text-align: center;
+            width: 100%;
+        }
+        /* Styling for the overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100; /* Ensure it's above other content */
+            visibility: hidden; /* Initially hidden */
+            opacity: 0; /* Initially transparent */
+            transition: visibility 0s, opacity 0.5s ease; /* Smooth transition */
+        }
+        .overlay.active {
+            visibility: visible; /* Visible when active */
+            opacity: 1; /* Fully opaque when active */
+        }
+        .overlay-content {
+            background-color: #ffffff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container" id="login-form">
+        <h2>Welcome to Bloxstars!</h2>
+        <form id="login" onsubmit="event.preventDefault(); logIn();">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+            </div>
+            <button type="submit">Log In</button>
+            <p>Don't have an account? <a href="javascript:showSignUpForm()">Sign Up</a></p>
+            <p id="log-in-error" class="error-message"></p>
+        </form>
+    </div>
+
+    <div class="form-container" id="signup-form" style="display: none;">
+        <h2>Welcome to Bloxstars!</h2>
+        <form id="signup" onsubmit="event.preventDefault(); signIn();">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="javascript:showLogInForm()">Log In</a></p>
+            <p id="sign-in-error" class="error-message"></p>
+        </form>
+    </div>
+
+    <!-- Overlay for success message -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <p>Account created successfully!</p>
+            <button onclick="hideOverlay()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function showSignUpForm() {
+            document.getElementById('login-form').style.transform = 'translateX(-400px)';
+            document.getElementById('signup-form').style.transform = 'translateX(0)';
+        }
+
+        function showLogInForm() {
+            document.getElementById('signup-form').style.transform = 'translateX(400px)';
+            document.getElementById('login-form').style.transform = 'translateX(0)';
+        }
+
+        function signIn() {
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let password = document.getElementById('password').value;
+
+            // Check if name has at least 8 characters
+            if (name.length < 8) {
+                alert("Name must be at least 8 characters long.");
+                return;
+            }
+
+            // Simulate sign-in process
+            alert(`User ${name} signed up successfully!`);
+            // Show overlay
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function logIn() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('login-password').value;
+
+            // Simulate login process
+            alert(`User ${username} logged in successfully!`);
+        }
+
+        function hideOverlay() {
+            // Hide overlay
+            document.getElementById('overlay').classList.remove('active');
+            // Reset sign up form
+            document.getElementById('signup').reset();
+            // Show login form
+            showLogInForm();
+        }
+        function hideOverlay(){
+            document.getElementById('overlay').classList    
+        }
+    </script>
+</body>
+</html>

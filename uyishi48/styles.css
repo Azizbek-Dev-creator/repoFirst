@@ -1,0 +1,22 @@
+.der {
+    margin-top: 50px;
+}
+.top {
+    background-image: url(./Rectangle\ 294\ \(1\).png);
+    width: 100%;
+}
+.but {
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 9px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-top: 30px;
+    border: none;
+}
+.hj {
+    background-image: url(Group\ 571.png);
+    background-repeat: no-repeat;
+    padding: 20px;
+}

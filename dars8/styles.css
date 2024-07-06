@@ -1,0 +1,278 @@
+
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+   text-decoration: none;
+ 
+}
+
+.container {
+   width: 1368px;
+   margin: 0 auto;
+   display: flex;
+}
+header{
+   padding: 17px 0;
+   font-family: "Lato", sans-serif;
+   position: fixed;
+   width: 100%;
+   backdrop-filter: blur(20px);
+
+}
+.nav_header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+}
+
+.header_container_in .logo{
+       display: inline-block;
+       margin-right:172px;
+       width: 80px;
+
+}
+.logo img {
+   width: 100%;
+}
+.header_nav{
+   margin-right: 183px;
+}
+.header_nav  .nav_lils{
+   display: flex;
+   gap: 72px;
+}
+.header_nav  .nav_lils a:hover{
+   text-decoration: underline;
+}
+.lils a {
+   font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #292929;
+  transition: all 0.5s ease-in-out;
+}
+
+.buttons  .buttonFirst{
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 24px;
+   background: none; 
+   border: none;
+   margin-right: 35px;
+   cursor: pointer;
+}
+.buttons .buttonFirst:hover{
+   text-decoration: underline;
+}
+.buttons .buttonSecond{
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 25px;
+   color: white;
+   border: none;
+   background: #01996D;
+   border-radius: 5px;
+   padding: 13px 50px;
+   cursor: pointer;
+   
+}
+.buttons .buttonSecond:hover{
+   color: #ccc;
+}
+.Center{
+   padding-top: 175px;
+   padding-bottom: 336px;
+   background-image: url("./BG.png");
+   background-repeat: no-repeat;
+   font-family: "Noto Sans Georgian", sans-serif;
+   background-size: cover;
+}
+.CenterThings h1 {
+   font-weight: 700;
+   font-size: 65px;
+   line-height: 74px;
+   color: #01996D;
+   width: 440px;
+   margin-bottom: 30px;
+
+}
+.CenterThings p {
+   font-family: 'Lato';
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 31px;
+   color: #484848;
+   width: 420px;
+   height: 123px;
+}
+.button{
+   background: #01996D;
+   border: none;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 25px;
+   color: white;
+   padding: 20px 50px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+
+}
+.button:hover{
+   background:#a8ad17;
+}
+
+.medium_zone {
+   padding: 20px;
+   max-width: 800px;
+}
+
+.texts {
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.answers {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.answer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.answer img {
+   max-width: 100%;
+   height: auto;
+   margin-top: 20px;
+}
+
+.answer h2 {
+   color: #92b5a8;
+   font-size: 48px;
+   margin: 0;
+}
+
+.answer h3 {
+   font-size: 24px;
+   margin: 10px 0;
+}
+.secondPart {
+   max-width: 1200px;
+   margin: auto;
+}
+
+.Story {
+   background-color: #204F47;
+   color: white;
+   display: flex;
+   padding: 40px;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.Story .texta {
+   max-width: 50%;
+}
+
+.Story h1 {
+   font-size: 36px;
+}
+
+.Story p {
+   font-size: 18px;
+   margin: 20px 0;
+}
+
+.Story button {
+   background-color: #34B487;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+}
+
+.Story .imag img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px;
+}
+
+.narsa {
+   display: flex;
+   padding: 40px;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.imege img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px;
+}
+
+.textd {
+   max-width: 50%;
+}
+
+.textd h2 {
+   font-size: 20px;
+   color: #204F47;
+}
+
+.textd h1 {
+   font-size: 36px;
+   color: #204F47;
+   margin: 20px 0;
+}
+
+.textd p {
+   font-size: 18px;
+   color: #555;
+   margin: 20px 0;
+}
+
+.textd button {
+   background-color: #34B487;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+}
+
+
+.foter {
+   background-color: #204F47;
+   padding: 20px;
+}
+
+.foter ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.foter ul li {
+   margin: 10px 0;
+}
+
+.foter ul li h1 {
+   color: white;
+   font-size: 24px;
+   margin: 0;
+}
+
+.foter ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 18px;
+}

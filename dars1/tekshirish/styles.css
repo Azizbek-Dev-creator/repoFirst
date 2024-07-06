@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    animation: 1.5s anim linear infinite;
+}
+@keyframes anim {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(80deg);
+        background-color: red;
+        border-radius: 25%;
+    }
+    100% {
+        transform: rotate(180deg);
+        background-color: black;
+        border-radius: 50%;
+    }
+}

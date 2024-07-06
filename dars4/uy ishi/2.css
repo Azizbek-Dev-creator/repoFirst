@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.kattadiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.yozuv{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.yozuv img{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.yozuv{
+    font-weight: bold;
+    color: #555;
+}
+h2{
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+p{
+    color: #777;
+}
