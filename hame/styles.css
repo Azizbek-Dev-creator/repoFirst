@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0d0d2b;
+    color: #ffffff;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #0d0d2b;
+}
+
+.logo {
+    font-size: 24px;
+    color: #ffffff;
+}
+.texta{
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(to right, #2563EB, #D946EF);
+}
+.logo span {
+    color: #7070f5;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #7070f5, #a070f5);
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.text {
+    max-width: 50%;
+}
+
+.text h1 {
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.text h1 span {
+    color: #f570f5;
+}
+
+.text p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #b3b3b3;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.first {
+    padding: 10px 20px;
+    background: #7070f5;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.photo img {
+    width: 400px;
+    height: auto;
+}
+.contaener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.tuxt {
+    max-width: 600px;
+}
+
+.tuxt h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.tuxt p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.tuxt button {
+    background-color: #6c63ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.imag {
+    flex-shrink: 0;
+    max-width: 500px;
+}
+
+.imag img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
